@@ -1,0 +1,17 @@
+name: analytics-ingestion
+version: 0.1.0
+
+authors:
+  - SREEMT <tmeers101@gmail.com>
+
+targets:
+  analytics-ingestion:
+    main: src/analytics-ingestion.cr
+
+crystal: '>= 1.11.2'
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+license: Apache-2.0
