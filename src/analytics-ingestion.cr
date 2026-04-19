@@ -3,20 +3,6 @@ require "./services/apiKeyValidator.service.cr"
 require "./middleware/auth.cr"
 
 ###
-# The main namespace for the Analytics Ingestion application.
-# This module contains constants and can hold classes, sub-modules, and methods
-# related to analytics data processing and ingestion.
-###
-module Analytics::Ingestion
-  ###
-  # The version of the Analytics Ingestion application.
-  ###
-  VERSION = "0.2.0"
-
-  # TODO: Put your code here
-end
-
-###
 # Global filter that runs before every request to authenticate API keys.
 # Checks for valid API keys and halts with 401 if missing or invalid.
 ###
@@ -71,3 +57,18 @@ end
 # This is the entry point that begins listening for HTTP requests.
 ###
 Kemal.run
+
+
+###
+# The main namespace for the Analytics Ingestion application.
+# This module contains constants and can hold classes, sub-modules, and methods
+# related to analytics data processing and ingestion.
+###
+module Analytics::Ingestion
+  ###
+  # The version of the Analytics Ingestion application.
+  ###
+  VERSION = "0.2.0"
+
+  # TODO: Put your code here
+end
