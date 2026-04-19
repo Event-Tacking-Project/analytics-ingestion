@@ -8,9 +8,19 @@
 
 require "../config/env.cr"
 
-# VALID_KEYS holds current keys to compare. This will be modified to pull from DB
+###
+# Service class for validating API keys.
+# Currently checks against a static list of keys; future versions will support
+# database or Redis lookups and project ID extraction.
+###
 class ApiKeyValidator
-    # Checks inputted key if its valid
+    ###
+    # Checks if the provided API key is valid.
+    # Compares against the list of allowed keys from environment configuration.
+    #
+    # key - The API key string to validate.
+    # Returns true if valid, false otherwise.
+    ###
     def self.valid?(key : String)
         ENV_API_KEYS.includes?(key)
     end
