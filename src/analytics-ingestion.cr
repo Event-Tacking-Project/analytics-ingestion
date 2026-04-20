@@ -1,3 +1,6 @@
+require "dotenv"
+Dotenv.load ".env"
+
 require "kemal"
 require "./services/apiKeyValidator.service.cr"
 require "./middleware/auth.cr"
