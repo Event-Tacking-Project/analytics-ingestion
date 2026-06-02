@@ -24,4 +24,8 @@ class ApiKeyValidator
     def self.valid?(key : String)
         ENV_API_KEYS.includes?(key)
     end
+
+    ###
+    # Add project id validator here once needed
+    ###
 end
